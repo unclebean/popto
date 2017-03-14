@@ -15,7 +15,9 @@
              [buddy.auth.accessrules :refer [restrict]]
              [buddy.sign.jwt :as jwt]
              [buddy.hashers :as hashers]
-             [cheshire.core :as json])
+             [cheshire.core :as json]
+             [popto.dao.db-handler :as db-handler]
+             )
   (:gen-class))
 
 (def secret (nonce/random-bytes 32))
@@ -46,11 +48,12 @@
       (redirect "/ui/login"))))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World")
+  ;(GET "/" [] "Hello World")
   (GET "/ui/login" _ "login page..")
   (POST "/api/login" [] do-login)
   (GET "/ui/admin" [] (restrict admin-view {:handler is-admin :on-error (fn [req _] (redirect "/ui/login"))}))
-  (route/not-found "Not Found"))
+  (route/not-found "Not Found")
+  (route/resources "/"))
 
 (def auth-backend (backends/jws {:secret "test"
                                  :token-name "i-Token"}))
