@@ -34,7 +34,13 @@
   json encode & decode
   
   
-#### TODO
+#### Doing... 
 
 - integrate om for frontend
+  
+  good article
+  [clojurescript 101](http://swannodette.github.io/2013/11/07/clojurescript-101)
+  [clojurescript cheatsheet](http://cljs.info/cheatsheet/)
+  [clojurescript DOM manipulation](http://davedellacosta.com/cljs-dom-survey)
+
 
