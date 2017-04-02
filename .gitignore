@@ -17,4 +17,5 @@ pom.xml.asc
 popto.iml
 .DS_Store
 /devDB
-/public
+resources/public/js
+figwheel_server.log

@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-canvas{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    flex: none;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dotsters{
+    flex:none;
+    width: 46px;
+    height: 46px;
+}
+
+.blue{
+    background: url('../images/blue_geo@2x.png') no-repeat;
+}
+.red{
+    background: url('../images/red_geo@2x.png') no-repeat;
+}
+.green{
+    background: url('../images/green_geo@2x.png') no-repeat;
+}
+.penta{
+    background: url('../images/penta_red_geo@2x.png') no-repeat;
+}
+.star{
+    background: url('../images/star_yellow_geo@2x.png') no-repeat;
+}
+.triangle{
+    background: url('../images/triangle_green_geo@2x.png') no-repeat;
+}
+.yellow{
+    background: url('../images/yellow_geo@2x.png') no-repeat;
+}
+
+
+.level-1 {
+    visibility: visible;
+    -ms-transform: translate(0,180px);
+    -moz-transform: translate(0,180px);
+    -webkit-transform: translate3d(0,180px,0);
+    -webkit-animation-name: level-1;
+}
+@-webkit-keyframes level-1{
+    0% { -webkit-transform: translate3d(0,0px,0);-moz-transform: translate(0,0px);-ms-transform: translate(0,0px); -webkit-animation-timing: ease-in;}
+    35% { -webkit-transform: translate3d(0,180px,0);-moz-transform: translate(0,180px);-ms-transform: translate(0,180px); -webkit-animation-timing: ease-out;}
+    55% { -webkit-transform: translate3d(0,135px,0);-moz-transform: translate(0,135px);-ms-transform: translate(0,135px); -webkit-animation-timing: ease-in;}
+    71% { -webkit-transform: translate3d(0,180px,0);-moz-transform: translate(0,180px);-ms-transform: translate(0,180px); -webkit-animation-timing: ease-out;}
+    81% { -webkit-transform: translate3d(0,168px,0);-moz-transform: translate(0,168px);-ms-transform: translate(0,168px); -webkit-animation-timing: ease-in;}
+    89% { -webkit-transform: translate3d(0,180px,0);-moz-transform: translate(0,180px);-ms-transform: translate(0,180px); -webkit-animation-timing: ease-out;}
+    95% { -webkit-transform: translate3d(0,177px,0);-moz-transform: translate(0,177px);-ms-transform: translate(0,177px); -webkit-animation-timing: ease-in;}
+    100% { -webkit-transform: translate3d(0,180px,0);-moz-transform: translate(0,180px);-ms-transform: translate(0,180px); -webkit-animation-timing: ease-out;}
+}

@@ -20,7 +20,12 @@
                  [buddy/buddy-auth "1.4.1"]
                  [buddy/buddy-hashers "1.2.0"]
                  [cheshire "5.7.0"]
-                 [org.omcljs/om "1.0.0-alpha48"]]
+                 [cljsjs/react "15.4.2-1"]
+                 [cljsjs/react-dom "15.4.2-1"]
+                 [sablono "0.7.7"]
+                 [org.omcljs/om "1.0.0-alpha48"]
+                 [prismatic/dommy "1.1.0"]
+                 [hipo "0.5.2"]]
   :plugins [[lein-ring "0.11.0"]
             [lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.5"]]
@@ -31,6 +36,7 @@
   :uberjar-name "popto.jar"
   :main popto.app
   :env {:currently "prod"}
+  :source-paths ["src" "src-ui"]
   :repl-options {:init-ns user}
   :cljsbuild {
               :builds [{:id "app"
